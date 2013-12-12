@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921F4585185A615B006C0219 /* placeholder-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 921F4584185A615B006C0219 /* placeholder-image@2x.png */; };
 		92417835185A15F100FD780A /* FRAsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92417834185A15F100FD780A /* FRAsynchronousImageView.m */; };
 		9241783A185A4C5A00FD780A /* all-tab-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92417837185A4C5A00FD780A /* all-tab-icon@2x.png */; };
 		9241783B185A4C5A00FD780A /* image-tab-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92417838185A4C5A00FD780A /* image-tab-icon@2x.png */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921F4584185A615B006C0219 /* placeholder-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-image@2x.png"; sourceTree = "<group>"; };
 		92417833185A15F100FD780A /* FRAsynchronousImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRAsynchronousImageView.h; sourceTree = "<group>"; };
 		92417834185A15F100FD780A /* FRAsynchronousImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRAsynchronousImageView.m; sourceTree = "<group>"; };
 		92417837185A4C5A00FD780A /* all-tab-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all-tab-icon@2x.png"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		92417836185A4C5A00FD780A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				921F4584185A615B006C0219 /* placeholder-image@2x.png */,
 				9241783D185A555B00FD780A /* Default-586h@2x.png */,
 				9241783E185A555B00FD780A /* Default@2x.png */,
 				9241783F185A555B00FD780A /* Icon-80.png */,
@@ -285,6 +288,7 @@
 				9241783C185A4C5A00FD780A /* text-tab-icon@2x.png in Resources */,
 				9241783B185A4C5A00FD780A /* image-tab-icon@2x.png in Resources */,
 				92E0F7D518578149007475B2 /* Main_iPhone.storyboard in Resources */,
+				921F4585185A615B006C0219 /* placeholder-image@2x.png in Resources */,
 				92417844185A555B00FD780A /* Icon-120.png in Resources */,
 				9241783A185A4C5A00FD780A /* all-tab-icon@2x.png in Resources */,
 			);
