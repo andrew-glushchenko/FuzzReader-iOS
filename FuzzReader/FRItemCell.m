@@ -50,7 +50,7 @@
     self.itemImage.hidden = [self.item isTextItem];
     self.itemText.hidden = [self.item isPhotoItem];
     if ( [self.item isPhotoItem] ) {
-        [self.itemImage setImageWithURL:self.item.itemData placeholderImage:nil];
+        [self.itemImage setImageWithURL:self.item.itemData placeholderImage:[UIImage imageNamed:@"placeholder-image.png"]];
     }
     else if ( [self.item isTextItem] ) {
         self.itemText.text = self.item.itemData;

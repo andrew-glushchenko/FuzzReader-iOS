@@ -41,6 +41,7 @@
 
 - (void)setImageWithURL:(NSString*)imageURL placeholderImage:(UIImage*)placeholderImage {
     [self cancelImageLoading];
+    self.placeholderImage = placeholderImage;
     self.image = nil;
     if ( [imageURL length] > 0 ) {
         [self.downloadIndicator startAnimating];
@@ -48,7 +49,7 @@
         imageLoadRequest.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
         self.imageLoader = [NSURLConnection connectionWithRequest:imageLoadRequest delegate:self];
     }
-    if ( placeholderImage ) {
+    else {
         self.image = placeholderImage;
     }
 }
@@ -74,8 +75,14 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [self.downloadIndicator stopAnimating];    
-    self.image = [UIImage imageWithData:self.imageData];
+    [self.downloadIndicator stopAnimating];
+    UIImage *dowloadedImage = [UIImage imageWithData:self.imageData];
+    if ( dowloadedImage ) {
+        self.image = dowloadedImage;
+    }
+    else {
+        self.image = self.placeholderImage;
+    }
     self.imageData = nil;
     self.imageLoader = nil;
 }
@@ -83,6 +90,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"Did fail loading image {%@}", [error localizedDescription]);
     [self.downloadIndicator stopAnimating];
+    self.image = self.placeholderImage;
     self.imageLoader = nil;
     self.imageData = nil;
 }
